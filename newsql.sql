@@ -31,3 +31,10 @@ SELECT * FROM user;
 
 -- Delete the entire database
 DROP DATABASE newsql;
+
+-- Select only email and name columns from user table
+SELECT email, name FROM user;
+
+-- Rename table "user" to "programer"
+RENAME TABLE user TO programer;
+
