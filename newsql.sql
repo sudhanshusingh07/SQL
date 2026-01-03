@@ -38,3 +38,23 @@ SELECT email, name FROM user;
 -- Rename table "user" to "programer"
 RENAME TABLE user TO programer;
 
+ ALTER TABLE programer ADD COLUMN is_active BOOLEAN DEFAULT true; --Add a column
+
+ALTER TABLE programer DROP COLUMN is_active; -- delete column
+ALTER TABLE programer MODIFY column name VARCHAR(150)  -- modify column
+
+ALTER TABLE programer MODIFY column email VARCHAR(100) after id  -- sifting of column
+
+
+-- Insert values in table
+INSERT INTO programer
+VALUES (NULL, 'sudhanshu', 'ss@s', 'MALE', '2001-01-01', DEFAULT);
+
+INSERT INTO programer VALUES
+(1, 'sudhanshu', 'ss@s', 'MALE', '2001-01-01', '2026-01-03 02:00:00');
+
+
+INSERT INTO programer (id, name, email, gender, date_of_birth)
+VALUES (1, 'sudhanshu', 'ss@s', 'MALE', '2001-01-01');
+
+select * from users where gender='Female'; -- "where" is use to find some specific things to write any condition after where
